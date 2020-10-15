@@ -1,10 +1,3 @@
-# License: BSD 3-clause
-# Authors: Kyle Kastner
-# LTSD routine from jfsantos (Joao Felipe Santos)
-# Harvest, Cheaptrick, D4C, WORLD routines based on MATLAB code from M. Morise
-# http://ml.cs.yamanashi.ac.jp/world/english/
-# MGC code based on r9y9 (Ryuichi Yamamoto) MelGeneralizedCepstrums.jl
-# Pieces also adapted from SPTK
 from __future__ import division
 import numpy as np
 import scipy as sp
