@@ -7,6 +7,7 @@ Code for our USENIX 21 paper [WaveGuard: Understanding and Mitigating Audio Adve
 
 ``pip install -r requirements.txt``
 
+Also install Deepspeech following the same instructions as in [https://github.com/carlini/audio_adversarial_examples](https://github.com/carlini/audio_adversarial_examples) to evaluate the defense. 
 
 ## Running the defense
 
