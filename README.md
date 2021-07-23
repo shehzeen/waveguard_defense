@@ -1,5 +1,13 @@
 # WaveGuard Defense
 
+Code for our USENIX 21 paper [WaveGuard: Understanding and Mitigating Audio Adversarial Examples
+](https://www.usenix.org/system/files/sec21fall-hussain.pdf).
+
+## Requirements
+
+``pip install -r requirements.txt``
+
+
 ## Running the defense
 
 Running the defense on a directory of wav files (sampled at 16KHz): 
