@@ -1,3 +1,36 @@
 # WaveGuard Defense
 
-This repository currently contains the differentiable and defense implementation of the LPC transform. We will be releasing the code for our defense and adaptive attacks with the final version of the paper. The notebook LPC_sanity_check.ipynb reconstructs a sample audio file using the original and differentiable implementations of the LPC transform and verifies whether the outputs of the two implementations match. 
+## Running the defense
+
+Running the defense on a directory of wav files (sampled at 16KHz): 
+
+```
+python Defender/defender_multiple.py --in_dir <PATH TO DIR WITH WAV FILES> --out_base <PATH TO OUTPUT DIR> --defender_type DEFENDER_TYPE --defender_hp DEFENDER_HYPERPARAMETER;
+```
+
+Defender type can be ``lpc, mel_heuristic, filter_power, quant, downsample_upsample``. defender_hp corresponds to number of lpc coeffecients, mel bins, quantization bits, downsampling rare for ``lpc, mel_heuristic, quant, downsample_upsample`` respectively.
+
+
+Running the defense on a directory of wav files (sampled at 16KHz): 
+
+```
+python Defender/defender_multiple.py --in_dir <PATH TO DIR WITH WAV FILES> --out_base <PATH TO OUTPUT DIR> --defender_type DEFENDER_TYPE --defender_hp DEFENDER_HYPERPARAMETER;
+```
+
+Defender type can be ``lpc, mel_heuristic, filter_power, quant, downsample_upsample``. defender_hp corresponds to number of lpc coeffecients, mel bins, quantization bits, downsampling rare for ``lpc, mel_heuristic, quant, downsample_upsample`` respectively.
+
+
+## Evaluating the AUC
+
+```python evaluate_detector.py --in_orig <DIR CONTAINING ORIGINAL UNDEFENDED AUDIO> --in_orig_def <DIR CONTAINING ORIGINAL DEFENDED AUDIO> --in_adv <DIR CONTAINING ADVERSARIAL UNDEFENDED AUDIO> --in_orig <DIR CONTAINING ADVERSARIAL DEFENDED AUDIO>```
+
+## Citing our work
+
+```
+@inproceedings{hussain2021waveguard,
+  title={WaveGuard: Understanding and Mitigating Audio Adversarial Examples},
+  author={Hussain, Shehzeen and Neekhara, Paarth and Dubnov, Shlomo and McAuley, Julian and Koushanfar, Farinaz},
+  booktitle={USENIX Security 21},
+  year={2021}
+}
+```
