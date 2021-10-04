@@ -33,7 +33,11 @@ Defender type can be ``lpc, mel_heuristic, filter_power, quant, downsample_upsam
 
 ## Evaluating the AUC
 
+The contents of ``--in_adv`` can be generated using past works on audio adversairal examples( [1](https://github.com/carlini/audio_adversarial_examples), [2](https://github.com/cleverhans-lab/cleverhans/tree/ae4264f4d80abe3ad45628d88faa011ee13f0841/examples/adversarial_asr) ) by applying these attacks on the directory of benign audio examples ``--in_orig``. The contents defended directories ``--in_orig_def``, ``--in_adv_def`` need to be generated using one of our defenses described above. Then use ``transcribe_deepspeech.py`` to generate transcriptions from the deepspeech model for each directory. Then run below command to evaluate the AUC:
+
 ```python evaluate_detector.py --in_orig <DIR CONTAINING ORIGINAL UNDEFENDED AUDIO> --in_orig_def <DIR CONTAINING ORIGINAL DEFENDED AUDIO> --in_adv <DIR CONTAINING ADVERSARIAL UNDEFENDED AUDIO> --in_orig <DIR CONTAINING ADVERSARIAL DEFENDED AUDIO>```
+
+
 
 ## Citing our work
 
